@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Log In</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="script/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="script/S7_framework.js"></script>
+		<script type="text/javascript" src="script/Demo17.js"></script>
+	</head>
+	<body>
+		<!-- Discription ----------------------------------------------------------------------------------------------------------------------------------------->
+		<style>
+			.demohead { background-color:#E0E0E0; width:100%}
+			.democoltitle  { width: 189px;font-weight:bold;vertical-align:top;}
+			.democoltext   { }
+			.demorow  { }
+		</style>
+		<table class="demohead">
+			<tr class="demorow">
+
+				<td class="democoltitle" >This page demonstrates:</td>
+				<td class="democoltext"  >How to log in at a user defined webpage.</td>
+			</tr>
+		</table>
+		<!-- END Discription ------------------------------------------------------------------------------------------------------------------------------------->
+		
+		<h1>Log in at the user defined webpages</h1>
+		<div id="login">								<!-- Log IN Area -->
+			<iframe id="WebserverIFrame"
+			style="display:none" 
+			name="WebserverIFrame"
+			src="/Portal/Portal.mwsl">
+			</iframe>
+			<div id="loginBox"></div>					<!-- "Login_Area" is defined in S7Web.css for S7-1500 CPUs and S7-1200 FW2.2-->
+		</div>											<!-- Log IN Area End -->
+		
+		<style>
+			/*S7-1500 */
+			
+			#Login_Area_Name_InputTag{		/*Input field username*/
+				width:100px;
+			}
+			#Login_Area_PW_InputTag{		/*Input field password*/
+				width:100px;
+			}
+			#Login_Area_SubmitButton{		/*Button for login*/
+				width:80px;
+			}
+			.Logout_Button{					/*Button for logout*/
+				width: 100px;
+			}
+			#logout_user_name{				/*div of username after login*/
+				font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+			}
+			
+			/*S7-1200 */
+			
+			#username{					/*Input field username*/
+				width:100px;
+			}
+			#password{					/*Input field password*/
+				width:100px;
+			}
+			#loginButton{				/*Button for login*/
+				width:80px;
+			}
+			.text{						/*Button for logout*/
+				width: 100px;
+			}
+			#loggedInUser{				/*div of username after login*/
+				font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+			}
+		</style>
+	</body>
+</html>

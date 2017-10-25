@@ -1,0 +1,237 @@
+<!-- AWP_In_Variable Name='"testBit"' -->
+<!-- AWP_In_Variable Name='"testByte"' -->
+<!-- AWP_In_Variable Name='"testInt"' -->
+<!-- AWP_In_Variable Name='"testWord"' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testBit' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testWord' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testInt' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testWordArray[3]' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testBitArray[3]' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testChar' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testByte' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testDWord' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testDInt' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testReal' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testString' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testTime' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testDate' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testToD' -->
+<!-- AWP_In_Variable Name='"NormalVariables".testDT' -->
+<!-- With these AWP-Statements the variables are allowed to be written to, e.g. by using HTML forms -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>S7-Web2PLC Demo05 - Variabletypes</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+<table class="demohead" > <!-- common head for all demo pages -->
+	<tr class="demorow" >
+		<td class="democoltitle" >This page demonstrates:</td>
+		<td class="democoltext"  >Reading and writing all variabletypes. </td>
+	</tr>
+</table>
+<hr>
+
+<p>
+Second page of this demo : 
+<a href="Demo05_HEADER.html">Reading special variables</a><br>
+</p>
+
+<table border="1">
+<tr>
+<th>Type</th><th>Name</th><th>Current Value</th><th>New Value</th><th>Write</th>
+</tr>
+
+<tr>
+<td colspan="5">
+<strong>Simple Variables</strong>
+</td>
+<tr>
+
+<!-- Example of the documentation  -->
+<tr>
+<form method="post" action="" >
+<td>BOOL</td><td>"testBit"</td><td>:="testBit":</td>
+<td><input type="text" name='"testBit"' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+<!----------------------------------->
+
+<tr>
+<form method="post"  action="">
+<td>BOOL</td><td>"testByte"</td><td>:="testByte":</td>
+<td><input type="text" name='"testByte"' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>WORD</td><td>"testWord"</td><td>:="testWord":</td>
+<td><input type="text" name='"testWord"' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>INT</td><td>"testInt"</td><td>:="testInt":</td>
+<td><input type="text" name='"testInt"' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<td colspan="5">
+<strong>Structure and Array</strong>
+</td>
+<tr>
+
+<!-- Example of the documentation  -->
+<tr>
+<form method="post" action="">
+<td>BOOL</td>
+<td>"NormalVariables".testBit</td>
+<td>:="NormalVariables".testBit:</td>
+<td>
+	<input type="text" name='"NormalVariables".testBit' maxlength="8" >
+</td>
+<td>
+	<input type="submit" value="Write">
+</td>
+</form>
+</tr>
+<!----------------------------------->
+<tr>
+<form method="post" action="">
+<td>WORD</td><td>"NormalVariables".testWord</td><td>:="NormalVariables".testWord:</td>
+<td><input type="text" name='"NormalVariables".testWord' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>WORD</td><td>"NormalVariables".testInt</td><td>:="NormalVariables".testInt:</td>
+<td><input type="text" name='"NormalVariables".testInt' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>WORD</td><td>"NormalVariables".testWordArray[3]</td><td>:="NormalVariables".testWordArray[3]:</td>
+<td><input type="text" name='"NormalVariables".testWordArray[3]' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>WORD</td><td>"NormalVariables".testBitArray[3]</td><td>:="NormalVariables".testBitArray[3]:</td>
+<td><input type="text" name='"NormalVariables".testBitArray[3]' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>CHAR</td>
+<td>"NormalVariables".testChar</td><td>":="NormalVariables".testChar:"</td>
+<td><input type="text" name='"NormalVariables".testChar' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>BYTE</td>
+<td>"NormalVariables".testByte</td><td>:="NormalVariables".testByte:</td>
+<td><input type="text" name='"NormalVariables".testByte' maxlength="8" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>DWORD</td>
+<td>"NormalVariables".testDWord</td><td>:="NormalVariables".testDWord:</td>
+<td><input type="text" name='"NormalVariables".testDWord' maxlength="12" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>DINT</td>
+<td>"NormalVariables".testDInt</td><td>:="NormalVariables".testDInt:</td>
+<td><input type="text" name='"NormalVariables".testDInt' maxlength="12" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>REAL</td>
+<td>"NormalVariables".testReal</td><td>:="NormalVariables".testReal:</td>
+<td><input type="text" name='"NormalVariables".testReal' maxlength="12" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>STRING</td>
+<td>"NormalVariables".testString</td><td>":="NormalVariables".testString:"</td>
+<td><input type="text" name='"NormalVariables".testString' maxlength="20" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+
+<tr>
+<form method="post" action="">
+<td>TIME</td>
+<td>"NormalVariables".testTime</td><td>:="NormalVariables".testTime:</td>
+<td><input type="text" name='"NormalVariables".testTime' maxlength="20" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>DATE</td>
+<td>"NormalVariables".testDate</td><td>:="NormalVariables".testDate:</td>
+<td><input type="text" name='"NormalVariables".testDate' maxlength="20" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>TOD</td>
+<td>"NormalVariables".testToD</td><td>:="NormalVariables".testToD:</td>
+<td><input type="text" name='"NormalVariables".testToD' maxlength="20" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+<tr>
+<form method="post" action="">
+<td>DT</td>
+<td>"NormalVariables".testDT</td><td>:="NormalVariables".testDT:</td>
+<td><input type="text" name='"NormalVariables".testDT' maxlength="28" ></td>
+<td><input type="submit" value="Write"></td>
+</form>
+</tr>
+
+</table>
+
+</body>
+</html>

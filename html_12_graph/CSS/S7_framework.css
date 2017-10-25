@@ -1,0 +1,475 @@
+/* PAGE Styles*/
+body, html{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border: none;
+	Font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+/* LAYOUT Styles*/
+#header_img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 76px;
+	width: 116px;
+	padding: 0;
+	margin: 0;
+	z-index: 5;
+	background: url(data:image/gif;base64,R0lGODlhdABMAMQAAOHh4/Dw8VhbZ9HS1mdqdZWXnhsgMHZ5gyovPjk+TElNWYWIkaSmrLO1usLEyP///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABAALAAAAAB0AEwAAAX/oCGOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvfIwRhQT8oRgqBHq/v9+8GeX0mCH4IIgl+ioh/JIIlAnR0AkALAQ+YmZQGDpkjnZmhDiKgmAQlDKGbC6GtIqyZCZ+YIwQArQ8LPrAPAA6gm6WzuA+jnKENJAiXmq/EtAa8D8mk0AqZAb+Xuj230yQEssfQ4w+KgKWY4tGtq5kLi+yq1Q8iqb2HInk+mQ35JcLo1TuRLtcIb83kmTshrRg9egDWAUEYoIDEcsMGmgA1ABMAEQIwdcTkjiRDj81A/9kLxWDTj4YPGKwLWO6XzWEHMp26l9OkwgE2HQCC1dOhykC4HLjsYalVgFMYBbqitwxTgwSYlCaE6ROWgHvmjhoQgPAdEAQLygYQmFESnWEGwN4jELJrJgZuxXmt2kusiAMjMwECcoDZQpo0AdK6Fupj3YUKl47wqtCTCQGBuQXhRQmx5Y3QAht8XBJyCcp8P0Myy4MBXj2FMa2NWs7t23F/Q8ki7QwT3rzySkNb0ACeAAKBB+somOkAW6lTj/Klxrtyu+AHQ/XGxcAH2EwDXHp+9nAl5OpcTVLObbloJgCafQgS8G9HIclBEum5CKe///8ABijggAQWaOCBCCao4CGCDDbo4IMQRijhhBRWaOGFGGao4YYcdujhhyCGKKJ/IQAAOw==) no-repeat;
+}
+#header_title{
+	position: absolute;
+	top: 0;
+	left: 116px;
+	height: 37px;
+	right: 0;
+	padding: 39px 0 0 15px;
+	margin: 0;
+	font-size: 26px;
+	font-weight: normal;
+	vertical-align: bottom;
+	text-align: left;
+	color: #8495BF;
+	background-color: #1B2030;
+}
+#login{
+	position: absolute;
+	top: 76px;
+	left: 0;
+	height: 60px;
+	width: 116px;
+	padding: 0;
+	margin: 0;
+	z-index: 5;
+	background-color: #7D82A0;
+}
+#user_title{
+	position: absolute;
+	top: 76px;
+	left: 116px;
+	height: 53px;
+	right: 0;
+	padding:7px 0 0 11px;
+	font-size: 16px;
+	font-weight: bold;
+	vertical-align: top;
+	background-color: #C3C3C3;
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: black;
+	border-collapse: collapse;
+}
+#menu{
+	position: absolute;
+	top: 136px;
+	left: 0;
+	bottom: 0;
+	width: 116px;
+	padding: 4px 0 0 0;
+	margin: 0;
+	z-index: 5;
+	background-color: #3C4561;
+	vertical-align: top;
+}
+#content{
+	position: absolute;
+	top: 136px;
+	left: 116px;
+	bottom: 0;
+	right: 0;
+	padding: 10px 20px 0 20px;
+	margin: 0;
+	z-index: 5;
+	background-color: #eaeaea;
+	vertical-align: top;
+	border-left: 2px solid black;
+	border-collapse: collapse;
+	overflow: auto;
+}
+#WebserverIFrame, .hidden{
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+	display: none;
+	visibility: hidden;
+}
+img{
+	border: 0;
+}
+pre{
+	padding: : 0;
+	font-weight: bold;
+}
+.leftFloat{
+	float: left;
+	margin: 0 20px 0 0;
+}
+	.clearFloat{
+	clear: left;
+}
+
+/********************************************/
+/*	BOX with Header Styles					*/
+/********************************************/
+#content div.container{
+	border: 1px solid #444;
+	/* min-width: 350px; */
+	border-radius: 10px;
+	padding: 15px;
+	margin: 20px 20px 10px 0;
+	float: left;
+}
+#content div.container h1{
+	margin: -25px 0px 10px 0;
+	font-size: 16px;
+}
+#content div.container h1 span{
+	padding: 0 10px;
+	background-color: #eaeaea;
+}
+
+/********************************************/
+/*	MENU Styles - FIRST ORDER MENU			*/
+/********************************************/
+#menu {
+	cursor: default;
+}
+#menu ul {
+	color: #B7C5FF;
+	margin: 0;
+	padding: 0 0 0 18px;
+}
+#menu ul ul {
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+#menu ul li {
+	list-style-image: url(data:image/gif;base64,R0lGODlhBAAHAIABAAAAXv///yH5BAEAAAEALAAAAAAEAAcAAAIIRA4WaeyrVCgAOw==);
+	margin: 0;
+	padding:18px 0 0 0;
+	text-indent:-3px;
+}
+#menu ul ul li {
+	list-style-image: url(data:image/gif;base64,R0lGODlhBAAHAIABAAAAXv///yH5BAEAAAEALAAAAAAEAAcAAAIIRA4WaeyrVCgAOw==);
+	margin: 0;
+	padding: 6px 0 0 0;
+	text-indent:-3px;
+}
+#menu li#intro {
+	padding: 48px 0 0 0;
+}
+#menu a {
+	color: #B7C5FF;
+	text-decoration: none;
+	cursor: pointer;
+}
+#menu a:hover, #menu  a:active {
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #3C4561;
+}
+#menu li.menuActive {
+	list-style-image: url(data:image/gif;base64,R0lGODlhBAAHAIABAP///////yH5BAEAAAEALAAAAAAEAAcAAAIIRA4WaeyrVCgAOw==);
+}
+#menu li.menuActive a {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/********************************************/
+/*	TABLE Styles							*/
+/********************************************/
+#content table {
+	padding: 0;
+	margin: 5px 0 5px 0;
+	border-style: hidden;
+	border: 0px solid #FFFFFF;
+	border-spacing: 0;
+	vertical-align: top;
+	empty-cells: show;
+	table-layout: auto;
+	border-collapse: collapse;
+}
+#content > div > table thead th{
+	padding: 4px 10px;
+	border: 1px solid #FFFFFF;
+	border-spacing: 0;
+	border-bottom: 1px double #FFFFFF;
+	border-bottom-width:thick;
+	vertical-align: middle;
+	min-width: 100px;
+	background-color: #c3c3c3;
+}
+#content > div > table tfoot tr{
+	padding: 4px 10px;
+	border: 1px solid #FFFFFF;
+	border-spacing: 0;
+	border-top: 1px double #FFFFFF;
+	border-top-width:thick;
+	vertical-align: middle;
+	min-width: 100px;
+}
+#content > div > table tbody tr:nth-child(odd) td{
+	padding: 4px 10px;
+	border: 1px solid #FFFFFF;
+	border-spacing: 0;
+	vertical-align: top;
+	min-width: 100px;
+	background-color: #eaeaea;
+}
+#content > div > table tbody tr:nth-child(even) td{
+	padding: 4px 10px;
+	border: 1px solid #FFFFFF;
+	border-spacing: 0;
+	vertical-align: top;
+	min-width: 100px;
+	background-color: #D9D9D9;
+}
+#content > div > table tbody tr:hover td{
+	background-color: #C1CDE9;
+}
+
+/********************************************/
+/*	FORM Styles								*/
+/********************************************/
+fieldset{
+margin: 5px 0 0 0;
+padding: 10px;
+border: 2px solid #C3C3C3;
+border-radius: 6px;
+}
+legend{
+font-size: 1.2em;
+}
+input{
+margin: 10px 0 0 10px;
+/*width: 100px;*/
+font-size: 12px;
+}
+label{
+padding: 0 0 0 10px;
+}
+
+/********************************************/
+/*	BREADCRUMBS Styles						*/
+/********************************************/
+#breadcrumbs{
+border-spacing: 0;
+margin: 0 0 20px -40px;
+padding: 4px 0;
+}
+#breadcrumbs ul{
+list-style-image: url(../../../Images/NaviPfeilblau.gif);
+margin: 0;
+}
+#breadcrumbs li{
+padding: 0;
+margin: 0 0 0 15px;
+float: left;
+}
+
+/********************************************/
+/*	LogIn Box Styles						*/
+/********************************************/
+div#loginBox {
+font-size: 10px;
+width: 115px;
+min-width: 115px;
+height: 60px;
+background-color: #7D82A0;
+margin: 0;
+padding: 0;
+}
+div#loginBox form#Login_Area_Form,
+div#loginBox form#loginForm {
+font-size: 10px;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+}
+div#loginBox form#Login_Area_Form .Login_Table {
+width: 100%;
+height: 100%;
+border-collapse: collapse;
+border: 0px solid #7D82A0;
+margin: 0;
+padding: 0;
+}
+div#loginBox form#Login_Area_Form input.Login_Input,
+div#loginBox form#Login_Area_Form input.Login_Input_Ghost {
+width: 52px;
+margin: 0;
+padding: 0;
+border: 0px solid #7D82A0;
+font-size: 11px;
+}
+div#loginBox form#loginForm input#username, 
+div#loginBox form#loginForm input#password {
+width: 80px;
+margin: 3px 10px;
+padding: 0;
+border: 0px solid #7D82A0;
+font-size: 11px;
+display: block;
+clear: left;
+}
+
+div#loginBox form#loginForm #loginButtons #loginType{
+height: 0;
+}
+div#loginBox form#Login_Area_Form .Login_Button {
+font-size: 11px;
+cursor: pointer;
+}
+div#loginBox form#loginForm #loginButtons #loginButton {
+font-size: 11px;
+margin: 0 10px;
+padding: 0;
+cursor: pointer;
+}
+div#loginBox form#Logout_Area_Form #logout_user_name,
+div#loginBox form#Logout_Area_Form .Logout_Button,
+div#loginBox form#logoutForm #loggedInUser,
+div#loginBox form#logoutForm div#logoutButton input {
+font-size: 11px;
+margin: 5px 10px;
+}
+div#loginBox form#Logout_Area_Form .Logout_Button,
+div#loginBox form#logoutForm div#logoutButton input {
+cursor: pointer;
+}
+
+
+
+/********************************************/
+/*	Canvas Elements							*/
+/********************************************/
+canvas{
+/*background-color: #eaeaea;*/
+}
+
+/********************************************/
+/*	CSS Sprites	- Ladeindikator				*/
+/********************************************/
+#loading_div{
+position: absolute;
+top: 136px;
+left: 118px;
+bottom: 0;
+right: 17px;
+z-index: 1000;
+/* 
+background-image: url(../Images/load.gif);
+background-repeat:no-repeat;
+background-position: 50% 50%;
+*/
+background-color: #ffffff; 
+/*filter: alpha(opacity=60);*/
+opacity: 0.6;
+}
+
+.loading_pic{
+position: absolute;
+width: 64px;
+height: 64px;
+top: 50%;
+left: 50%;
+margin-top: -32px;
+margin-left: -32px;
+background-image: url(../Images/sprites.png);
+-webkit-animation: play .8s steps(12) infinite;
+   -moz-animation: play .8s steps(12) infinite;
+	-ms-animation: play .8s steps(12) infinite;
+	 -o-animation: play .8s steps(12) infinite;
+		animation: play .8s steps(12) infinite;
+		animation-direction:reverse;
+}
+@-webkit-keyframes play{
+from { background-position:    0px  0px;}
+   to { background-position: -768px  0px;}
+}
+@-moz-keyframes play{
+from { background-position:    0px  0px;}
+   to { background-position: -768px  0px;}
+}
+@-ms-keyframes play{
+from { background-position:    0px  0px;}
+   to { background-position: -768px  0px;}
+}
+@-o-keyframes play{
+from { background-position:    0px  0px;}
+   to { background-position: -768px  0px;}
+}
+@keyframes play{
+from { background-position:    0px  0px;}
+   to { background-position: -768px  0px;}
+}
+
+
+
+/********************************************/
+/*	Gauge Seiten - Sprite Grafiken			*/
+/********************************************/
+.indicator_sprite, #grafik_sprite{
+height: 30px;
+width:  30px;
+float: left;
+margin: 0;
+background-image: url(../Images/sprites.png);
+background-repeat:no-repeat;
+background-position: 0px -64px;
+}
+#ant_txt_on, #ant_txt_com, #ant_txt_err, #ant_txt_auto, #ant_txt_man{
+border: 0;
+width:150px;
+float: right;
+margin: 5px 0 5px 10px;
+padding: 0;
+font-size: 16px;
+font-weight: bold;
+}
+#speed_gauge, #speed_bar, #speed_rot{
+float: left;
+margin: 10px;
+}
+
+
+
+/********************************************/
+/*	Graph Styles							*/
+/********************************************/
+.graph-container {
+	box-sizing: border-box;
+	width: 850px;
+	height: 450px;
+	padding: 20px 15px 15px 15px;
+	margin: 15px auto 15px auto;
+	border: 1px solid #ddd;
+	background: #fff;
+	background: linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+	-o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#graph-placeholder {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+	background:#fff;
+}

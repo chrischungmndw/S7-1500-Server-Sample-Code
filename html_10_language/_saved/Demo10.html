@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title data-i18n="title"></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!--<script type="text/javascript" src="../file.js"></script>-->
+<script type="text/javascript" src="script/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="script/jquery.cookie.js"></script>
+<script type="text/javascript" src="script/i18n_0.0.1.js"></script>
+<script type="text/javascript" src="script/Demo10.js"></script>
+</head>
+
+<body>
+	<!-- Start "grey field" Head for the Webpage ---------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.demohead { background-color:#E0E0E0; width:100%}
+		.demorow  { }
+		.democoltitle  { width: 189px;font-weight:bold;vertical-align:top;}
+		.democoltext   { }
+	</style>
+	
+	<table class="demohead" >
+		<tr class="demorow" >
+			<td class="democoltitle" >This page demonstrates:</td>
+			<td class="democoltext"  >How to realise a language switch.</td>
+		</tr>		
+	</table>
+	<!-- End "grey field" Head for the Webpage ----------------------------------------------------------------------------------------------------------------------->
+
+	<!-- Start "Language switch - By using the flags (header.switchFlag) --------------------------------------------------------------------------------------------->
+	<h1 data-i18n="header.pageH1"></h1>
+	<!-- End "Language switch - By using the flags (header.switchFlag) ----------------------------------------------------------------------------------------------->
+	
+	<!-- Start FlagSymbols ------------------------------------------------------------------------------------------------------------------------------------------->
+	<div class="container">
+		<h1><span data-i18n="header.switchFlag"></span></h1>
+			<span>
+				<img src="Images/flag-deutschland.png" 
+					class="language" data-lang="de" data-i18n="lang.de" 
+					width="30px" height="18px" />
+			</span>
+			<span>
+				<img src="Images/flag-unitedkingdom.png" 
+					class="language" data-lang="en" data-i18n="lang.en" 
+					width="30px" height="18px" />
+			</span>
+	</div>
+	<!-- End FlagSymbols --------------------------------------------------------------------------------------------------------------------------------------------->
+	<br><br><br>
+	<!-- Start "Textfields" ------------------------------------------------------------------------------------------------------------------------------------------>
+	<div class="container" style="clear: left">
+		<h1> <span data-i18n="text.header"> </span></h1>
+		<span data-i18n="text.content"> </span>
+	</div>
+	<!-- End "Textfields" -------------------------------------------------------------------------------------------------------------------------------------------->	
+	<br>
+	<!-- Start "Textfields in JavaScript" ---------------------------------------------------------------------------------------------------------------------------->
+	<div class="container" style="clear: left">
+		<h1>
+		<span data-i18n="java.header">
+		</span>
+		</h1>
+		
+		<span data-i18n="java.content">
+		</span>				
+	<!-- End "Textfields in JavaScript" ------------------------------------------------------------------------------------------------------------------------------>
+		<br><br><br><br><br>
+	<!-- Start Buttons and outputfield" ------------------------------------------------------------------------------------------------------------------------------>
+		<button id="textByJavaButton1" data-i18n="java.button1">
+		</button>
+		
+		<button id="textByJavaButton2" data-i18n="java.button2">
+		</button>
+		
+		<br><br>
+		<span id="textByJava" style="display: block; border: 1px solid black; width: 200px; height: 25px; line-height: 25px; text-align: center;">---</span>
+	<!-- End Buttons and outputfield" -------------------------------------------------------------------------------------------------------------------------------->
+	</div>
+</body>

@@ -1,0 +1,29 @@
+<!-- AWP_Start_Fragment Name="Update11" ID="1" -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>iframe page</title>
+<script type="text/javascript">
+    function Update()
+    {
+        // when loading this page the function Update will be called automatically (see body tag)
+        // ForceUpdate is a JavaScript-function in the main page demo11.html
+        // for processing the provided value.
+        // The webserver will replace the reference to the variable "dynvalue" in the next line by the actual value of that 
+        // PLC variable.
+        //
+        // Since this page is set "manual" (in AWP_Start_Fragment - statement at begin of the page), a dedicated
+        // user program within the PCL is triggered when this page is requested and will then defer the HTTP response 
+        // until the variable value has been changed
+
+        // <colon><equalsign><Variablenname><colon> is the common syntax for variable references
+        parent.ForceUpdate(:="VelocityVariables".dynValue:);
+    }
+</script>
+</head>
+
+<body onload="Update()">
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="script/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="script/S7_framework.js"></script>
+		<script type="text/javascript" src="script/Demo18.js"></script>
+		<script type="text/javascript" type="text/javascript"></script>
+	</head>
+	<body>
+	<!-- Discription ----------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.demohead { background-color:#E0E0E0; width:100%}
+		.democoltitle  { width: 189px;font-weight:bold;vertical-align:top;}
+		.democoltext   { }
+		.demorow  { }
+	</style>
+	<table class="demohead" >
+		<tr class="demorow" >
+
+			<td class="democoltitle" >This page demonstrates:</td>
+			<td class="democoltext"  >How to transfer data between the webpages and the plc in the most performant way.</td>
+		</tr>
+	</table><br>
+	<!-- END Discription ------------------------------------------------------------------------------------------------------------------------------------->
+	
+		<font face="Arial, Helvetica">
+			<svg width="900" height="150" overflow="hidden" style="border: 1px solid #000000;">
+				<rect id="myRect" x="0" y="75" width="100" height="75" fill="#cfcfcf" />
+				<circle id="myCircle" cx="450" cy="30" r="20" fill="green" />
+				<line x1="450" y1="70" x2="450" y2="150" stroke="black" stroke-width="3"/> 
+			</svg>
+			
+			<div id="counter" style="width:900px" align="center">The counter is not working!</div>
+			Speed: <input type="number" id="speed" min="-100" max="100"/><br><br><br>
+			<form id="formular">
+				<b>Send product to:</b><br><br>
+				Name: <input type="text" Name='"Plc2Web".name'/> <br><br>
+				Age:  <input type="number" Name='"Plc2Web".age'/> <br>	<br>
+				<input type="button" value="send" id="sendFormular"/>
+			</form>
+		</font>
+	</body>
+</html>

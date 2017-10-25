@@ -1,0 +1,66 @@
+<!-- AWP_In_Variable Name='"AlarmVariable".alarm' Enum="MyAlarmEnum" -->
+<!-- With this AWP statement the variable "Alarm" is enabled for writing and declared as Enum-type -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>S7-Web2PLC Demo08: Enumerations</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+<table class="demohead" > <!-- common head for all demo pages -->
+	<tr class="demorow" >
+		<td class="democoltitle" >This page demonstrates:</td>
+		<td class="democoltext"  >Using enumerations.</td>
+	</tr>
+</table>
+<hr>
+<br>
+
+<!-- Show the values of the enumeration variable -->
+<table border="1">
+<tr><th>Enum-Constant</th><th>Enum-Text</th></tr>
+<tr><td>0</td><td>No Alarm! all okay.</td></tr>
+<tr><td>1</td><td>Attention! Alarm 1 occurred!</td></tr>
+<tr><td>2</td><td>Attention! Alarm 2 occurred!</td></tr>
+<tr><td>3</td><td>Alarm 3!</td></tr>
+</table>
+
+
+<!-- read the current value of variable "alarm" -->
+<p>The current value of variable "alarm" is: 
+<strong> :="AlarmVariable".alarm:</strong></p>
+
+<!-- write a new value to Variable "alarm" by using forms -->
+<p>To which value the variable "alarm" is to be set ?</p>
+
+<!-- "alarm"=0 -->
+<form method="post" action="">
+<!-- The name-Attribut has to be set to the name of the variable to be written -->
+<p><input type="hidden" name='"AlarmVariable".alarm' value="No Alarm! all okay."></p>
+<p><input type="submit" value='"AlarmVariable".alarm=0'><p>
+</form>
+
+<!-- "alarm"=1 -->
+<form method="post" action="">
+<p><input type="hidden" name='"AlarmVariable".alarm' value="Attention! Alarm 1 occurred!"></p>
+<p><input type="submit" value='"AlarmVariable".alarm=1'><p>
+</form>
+
+<!-- "alarm"=2 -->
+<form method="post" action="">
+<p><input type="hidden" name='"AlarmVariable".alarm' value="Attention! Alarm 2 occurred!"></p>
+<p><input type="submit" value='"AlarmVariable".alarm=2'><p>
+</form>
+
+<!-- "alarm"=3 -->
+<form method="post" action="">
+<p><input type="hidden" name='"AlarmVariable".alarm' value="Alarm 3!"></p>
+<p><input type="submit" value='"AlarmVariable".alarm=3'><p>
+</form>
+
+</body>
+</html>

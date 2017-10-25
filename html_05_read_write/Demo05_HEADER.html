@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>S7-Web2PLC Demo05 - Headervalues</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+
+<table class="demohead" > <!-- common head for all demo pages -->
+	<tr class="demorow" >
+		<td class="democoltitle" >This page demonstrates:</td>
+		<td class="democoltext"  >Reading of special variables, in this case HTTP HEADER variables. Mapping to PLC variables.</td>
+	</tr>
+</table>
+<hr>
+
+<p>
+First page of this demo :  
+<a href="Demo05.html">Reading and writing various variable types</a><br>
+</p>
+
+<div>
+In order to request automatic transfer of HTTP Header values into PLC variables, the AWP statement AWP_In_Variable has to be used.
+If the PLC variable should not be a global variable with the same name as the header variable (e.g. "HEADER:From" may exist, however, some names may be too long for a PLC variable),
+then a mapping to another PLC variable (which may be a structure component within a DB) has to be defined with the "Use"-Option. 
+The PLC variables should be of type "string" to be able to hold all values of the Header variables.<br>
+An example definition from this page:
+</div>
+<table>
+<tr>
+<td style="background-color:#80A0FF"></td><td>
+<pre>
+&lt;!-- AWP_In_Variable Name="HEADER:From"	Use='"HttpInfoVariables".headerRequest.From' --&gt;</pre>
+</td></tr></table>
+
+<br>
+
+<!-- AWP_In_Variable Name="HEADER:Accept"				Use='"HttpInfoVariables".headerRequest.accept' -->
+<!-- AWP_In_Variable Name="HEADER:Accept-Encoding"		Use='"HttpInfoVariables".headerRequest.acceptEncoding' -->
+<!-- AWP_In_Variable Name="HEADER:Accept-Language"		Use='"HttpInfoVariables".headerRequest.acceptLanguage' -->
+<!-- AWP_In_Variable Name="HEADER:Connection"			Use='"HttpInfoVariables".headerRequest.connection' -->
+<!-- AWP_In_Variable Name="HEADER:Cookie"				Use='"HttpInfoVariables".headerRequest.cookie' -->
+<!-- AWP_In_Variable Name="HEADER:Host"					Use='"HttpInfoVariables".headerRequest.host' -->
+<!-- AWP_In_Variable Name="HEADER:Referer"				Use='"HttpInfoVariables".headerRequest.referer' -->
+<!-- AWP_In_Variable Name="HEADER:User-Agent"			Use='"HttpInfoVariables".headerRequest.userAgent' -->
+
+
+
+<table border="1">
+	<tr><th align="center">HTTP Request HEADER</th><th>&nbsp;</th><th align="center">Value</th></tr>
+	
+	<!-- Example of documentation -->
+	<tr><td>Accept</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.accept:&nbsp;</td></tr>
+	<!------------------------------>
+	
+	<tr><td>Accept-Encoding</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.acceptEncoding:&nbsp;</td></tr>
+	<tr><td>Accept-Language</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.acceptLanguage:&nbsp;</td></tr>
+	<tr><td>Connection</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.connection:&nbsp;</td></tr>
+	<tr><td>Cookie</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.cookie:&nbsp;</td></tr>
+	<tr><td>Host</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.host:&nbsp;</td></tr>
+	<tr><td>Referer</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.referer:&nbsp;</td></tr>
+	<tr><td>User_Agent</td><td style="width:20px" align="center">=</td><td style="width:385px">:="HttpInfoVariables".headerRequest.userAgent:&nbsp;</td></tr>
+</table>
+
+
+</body>
+</html>

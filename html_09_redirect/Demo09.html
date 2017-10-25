@@ -1,0 +1,59 @@
+<!-- AWP_In_Variable Name='"Data".testword' -->
+<!-- AWP_Out_Variable Name="HEADER:Status" Use='"Data".headerStatus' -->
+<!-- AWP_Out_Variable Name="HEADER:Location" Use='"Data".headerLocation' Enum="redirEnum" -->
+<!-- with AWP_Out_Variable the value of a Header Variable can be defined to be automatically set from a PLC variable -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description"    content="AWP Demo Redirection">
+<title>S7-Web2PLC Demo09: Redirection On Error</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+<table class="demohead" > <!-- common head for all demo pages -->
+	<tr class="demorow" >
+		<td class="democoltitle" >This page demonstrates:</td>
+		<td class="democoltext"  >Performing redirection of a page request.</td>
+	</tr>
+	<tr class="demorow">
+		<td class="democoltitle" >Comments:</td>
+		<td class="democoltext"  >The name of the page to be redirected to is defined by an ENUM variable</td>
+	</tr> 
+</table>
+<hr>
+<br>
+
+<div>Possible redirection to a page with an error message, stating that the range has been violated (&gt;100) </div>
+<br>
+<div>testword = :="Data".testword:</div>
+
+<form method="POST" action="">
+  <!-- writing to variable "testword", prerequisite is the AWP_In_Variable - statement at page begin -->
+  <input type="text" name='"Data".testword' size="10">
+  <input type="submit" value="Check the value" >
+</form>
+<br>
+<div>
+The AWP special variables 'HEADER:status' and 'HEADER:Location have to be defined with an AWP_Out_Variable statement within this page, 
+to request automatic transfer of a PLC-Variable into the corresponding HTTP header variable for the HTTP response.<br>
+An ENUM is used here to automatically set a defined string for a value (definition see _enumdefs.htm or Web2PLC project settings).
+</div>
+<br>
+<table>
+<tr>
+<td style="background-color:#80A0FF"></td><td>
+<pre>
+&lt;!-- AWP_Out_Variable Name='"Data".headerStatus' --&gt;
+&lt;!-- AWP_Out_Variable Name='"Data".headerLocation' Enum="redir_enum" --&gt;
+</pre>
+</td>
+</tr>
+</table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<! DOCTYPE html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <!-- ISO-8859-1 oder UTF-8 -->
+</head>
+
+<body>
+<!-- Discription ----------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.demohead { background-color:#E0E0E0; width:100%}
+		.democoltitle  { width: 189px;font-weight:bold;vertical-align:top;}
+		.democoltext   { }		
+	</style>
+	<table class="demohead" >
+			<td class="democoltitle" > This page demonstrates:</td>
+			<td class="democoltext"  > How to create an indicating element.</td>
+		</tr>
+	</table>
+<!-- END Discription ------------------------------------------------------------------------------------------------------------------------------------->
+	
+	
+<!-- Gauge------------------------------------------------------------------------------------------------------------------------------------------------>
+	<h1>Gauge</h1>
+	<svg height="110" width="110">
+		<circle id="gauge.red" cx="55" cy="55" r="40" stroke="#ff0033" stroke-dasharray="188.25 63.08" stroke-width="20px" fill="white" transform="rotate(135, 55,55)"/>
+		<circle id="gauge.orange" cx="55" cy="55" r="40" stroke="#ffa500" stroke-dasharray="167.55 83.78" stroke-width="20px" fill="white" transform="rotate(150, 55,55)"/>
+		<circle id="gauge.yellow" cx="55" cy="55" r="40" stroke="#ffd700" stroke-dasharray="146.61 104.72" stroke-width="21px" fill="white" transform="rotate(165, 55,55)"/>
+		<circle id="gauge.green" cx="55" cy="55" r="40" stroke="#7cFc00" stroke-dasharray="125.67 125.66" stroke-width="21px" fill="white" transform="rotate(180, 55,55)"/>
+		<circle id="gauge.lines" cx="55" cy="55" r="40" stroke="#000000" stroke-dasharray="1 9.47" stroke-width="10px" fill="white" transform="rotate(-1, 55,55)" />
+		<circle id="gauge.space" cx="55" cy="55" r="40" stroke="white" stroke-dasharray="62.83 188.5" stroke-width="20px" fill="white" transform="rotate(45, 55,55)"/>
+		<text x="40" y="35" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">Speed</text>
+		<text x="45" y="70" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">rqm</text>
+		<text x="50" y="100" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">0</text>
+		<text x="5" y="100" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">-1000</text>
+		<text x="75" y="100" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">1000</text>
+		<circle cx="55" id="gauge.point" cy="55" r="5" stroke="black" fill="black" />
+		<polygon id="gauge.pointer" points="50,55 60,55 55,5" fill="black" stroke="black"  />
+	</svg><br>
+	<input type="range" min="-135" max="135" value="0" onchange="changeSpeed(this.value)">
+	<script>
+		function changeSpeed(newValue)
+		{
+			document.getElementById("gauge.pointer").setAttribute("transform", "rotate(" + newValue + ",55,55)");
+		}
+	</script><br>
+<!-- END Gauge---------------------------------------------------------------------------------------------------------------------------------------------->
+	
+	
+<!-- Tank -------------------------------------------------------------------------------------------------------------------------------------------------->
+	<h1>Tank</h1>
+	<svg height="130" width="110">
+		<rect id="tank.red" x="10" y="10" width="30" height="10" fill="#ff0033"  stroke-width="0" />
+		<rect id="tank.orange" x="10" y="20" width="30" height="10" fill="#ffa500" stroke-width="0" />
+		<rect id="tank.yellow" x="10" y="30" width="30" height="10" fill="#ffd700" stroke-width="0" />
+		<rect id="tank.green" x="10" y="40" width="30" height="70" fill="#7cFc00" stroke-width="0" />
+		<rect id="tank.blue" x="10" y="60" width="30" height="50" fill="#00bffF" stroke-width="1" stroke="black" opacity="0.5"/>
+		<rect id="tank.stroke" x="10" y="10" width="30" height="100" fill="transparent" stroke-width="1" stroke="black" />
+		<line x1="40" y1="10" x2="40" y2="110" stroke="black" stroke-width="3" stroke-dasharray="1 9" />
+		<text x="45" y="15" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">100</text>
+		<text x="45" y="115" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">0</text>
+		<text x="45" y="125" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">Liter</text>
+	</svg><br>
+	<input type="range" min="0" max="100" value="50" onchange="changeTank(this.value)">
+	<script>
+		function changeTank (newValue)
+		{
+			document.getElementById("tank.blue").setAttribute("y", 110 - newValue);
+			document.getElementById("tank.blue").setAttribute("height", newValue);
+			
+		}
+	</script>
+<!-- END Tank ---------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+	
+<!-- Motor-------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<h1>Motor</h1>
+	
+	<svg height="100" width="100">
+		<circle id="motor.red"	cx="50" cy="50" r="25" stroke="#ff0033" stroke-dasharray="39.27 39.27" 	stroke-width="20" 	fill="white" 		/>
+		<circle 				cx="50" cy="50" r="35" stroke="black" 									stroke-width="2" 	fill="transparent" 	/>
+		<circle 				cx="50" cy="50" r="15" fill="black" 									stroke-width="0"  						/>
+	</svg>
+	
+	<br>
+	
+	<input type="range" min="0" max="360" onchange="changeMotor(this.value)">
+	
+	<script>
+		function changeMotor(newValue)
+		{
+			document.getElementById("motor.red").setAttribute("transform", "rotate(" + newValue + ",50,50)")
+		}
+	</script>
+<!-- END Motor---------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+	<br>
+<!-- Timer-------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<h1>Timer </h1>
+	<svg height="110" width="110">
+		<circle cx="55" id="timer.greenRed" cy="55" r="40" stroke="green" stroke-dasharray="188.25 63.08" stroke-width="20px" fill="white" transform="rotate(135, 55,55)"/>
+		<circle cx="55" id="timer.lines" cy="55" r="40" stroke="#000000" stroke-dasharray="1 9.47" stroke-width="10px" fill="white" transform="rotate(-1, 55,55)" />
+		<circle cx="55" id="timer.space" cy="55" r="40" stroke="white" stroke-dasharray="62.83 188.5" stroke-width="20px" fill="white" transform="rotate(45, 55,55)"/>
+		<text x="42" y="35" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">Timer</text>
+		<text x="52" y="70" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">s</text>
+		<text x="20" y="100" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">0</text>
+		<text x="85" y="100" fill="black" font-size="10" font-family="Helvetica, Arial, sans-serif">60</text>
+		<circle cx="55" id="timer.point" cy="55" r="5" stroke="black" fill="black" />
+		<polygon id="timer.pointer" points="50,55 60,55 55,7" fill="black" stroke="black" transform="rotate(-135, 55,55)" />
+	</svg><br>
+	<input type="number" style="width:104" id="number" max="60" min="0" onchange="setTimes(this.value)"/><br>
+	<input type="button" style="width:50" id="set" value="set" onclick="setTimer()" />
+	<input type="button" style="width:50" value="reset" onclick="resetTimer()" />
+	<script>
+		var times = parseInt(document.getElementById("number").value);
+		document.getElementById("set").disabled = false;
+		function setTimes(value)
+		{
+			times = value;
+		}
+		function resetTimer()
+		{
+			times = 0;
+		}
+		function setTimer()
+		{
+			document.getElementById("set").disabled = true;
+			document.getElementById("timer.greenRed").setAttribute("stroke", "red");
+			var positionPointer = ((270/60)*times) - 135;
+			document.getElementById("timer.pointer").setAttribute("transform", "rotate(" + positionPointer + ", 55, 55)");
+			document.getElementById("number").value = times;
+			if (times > 0 )
+			{
+				times = times - 1;
+				setTimeout(setTimer, 1000);
+			}
+			else
+			{
+				times = parseInt(document.getElementById("number").value);
+				document.getElementById("set").disabled = false;
+				document.getElementById("timer.greenRed").setAttribute("stroke", "green");
+			}
+		}
+	</script>
+<!-- END Timer---------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+</body>

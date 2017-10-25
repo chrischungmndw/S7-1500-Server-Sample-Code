@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+		<title>Web page demo - Automatic update - Update page</title>
+		<script type="text/javascript">
+		 
+		 /* String.trim() is not supported by every browser - thus add this functionality is necessary */
+		 if (!String.trim)
+		 {
+			String.prototype.trim = function () { return this.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, ''); };
+		 }
+		 
+		 /* Main function for calling the subroutines */
+		 function mainJavaScript()
+		 {
+			updateSingleVariablesTable();
+			updateFrame();
+		 }
+			
+		 /* Function for updating the variables */
+		 function updateSingleVariablesTable()
+		 {
+			var table = document.getElementById("singleVariablesTable");
+			for(i = 1; i < table.rows.length; i++)
+			{
+				var tagValue = table.rows[i].getElementsByTagName("td")[0].innerHTML;
+				var tagId = table.rows[i].getElementsByTagName("td")[1].innerHTML.trim();
+				parent.document.getElementById(tagId).innerHTML = tagValue;
+			}
+		 }
+		 
+		 /* Function for updating the web page */
+		 function updateFrame()
+		 {
+			window.setTimeout(function(){location.reload()}, document.getElementById("updateInterval").innerHTML.trim());
+		 }
+		</script>
+
+	</head>
+	<body onload="mainJavaScript()">
+
+		<table border="1">
+			<tr>
+				<td>
+					Update time in milliseconds
+				</td>
+			</tr>
+			<tr>
+				<td id="updateInterval">
+					10000
+				</td>
+			</tr>
+		</table>
+		<br/>
+
+		<table id="singleVariablesTable" border="1">
+			<tr>
+				<td>
+					AWP-Command to read variable
+				</td>
+				<td>
+					ID of the element of the main page which should be updated
+				</td>
+			</tr>
+			<tr>
+				<td><!-- read of date and time -->
+					<script type="text/javascript">
+						var hour = :="Clock".time.HOUR:;
+						var minute = :="Clock".time.MINUTE:;
+						if (hour < 10)
+						{
+							hour= "0" + hour;
+						}
+						if (minute < 10)
+						{
+							minute = "0" + minute;
+						}
+						document.write(hour + ":");
+						document.write(minute);
+						document.write('&nbsp;&nbsp;&nbsp;:="Clock".time.DAY:.');
+						document.write(':="Clock".time.MONTH:.');
+						document.write(':="Clock".time.YEAR:');
+					</script>
+				</td>
+				<td>
+					clock
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

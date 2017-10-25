@@ -1,0 +1,131 @@
+﻿# i18n.txt
+# Language file for languagdefinitions to switch between languages on demand
+
+# these file defines the text snippeds for diffrent languages.
+# Its format is based on JSON Format (JavaScript Object Notation).
+# predefined texte for German (de) and English (en).
+# Further languages are possible, just by adding in the same schem as the others.
+
+# Lines, starting within a '#', will be interpreded as a comment
+# and will be removed just bevor parsing the JSON format.
+{
+#
+# Page standard header
+#
+	"title": {
+		"de": "Webserver Test - Sprachumschaltung on demand",
+		"en": "Webserver Test - Languageswitch on demand"
+	},
+	"header.title": {
+		"de": "Webserver - performantes Webinterface - Minimalbeispiel",
+		"en": "Webserver - performant Webinterface - Minimum example"
+	},
+	"header.pageHead": {
+		"de": "Performante Sprachumschaltung - OnDemand",
+		"en": "Performance language switch - OnDemand"
+	},
+	"header.pageH1": {
+		"de": "Überschrift - HTML Aufruf in Demo10.html aus i18n.txt (header.pageH1)<h1>",
+		"en": "Page header - HTML call in Demo10.html from i18n.txt (header.pageH1)<h1>"
+	},
+	"header.switchFlag": {
+		"de": "Sprachumschaltung - Über die Landesflagge (header.switchFlag)",
+		"en": "Language switch - By using the flags (header.switchFlag)"
+	},
+#
+# Language images
+#
+	"lang.de": {
+		"de": "Deutsch",
+		"en": "German"
+	},
+	"lang.en": {
+		"de": "Englisch",
+		"en": "English"
+	},
+#
+# Menu texts
+#
+	"link.home" : {
+		"de": "Home",
+		"en": "Home"
+	},
+	"link.standard" : {
+		"de": "Standard",
+		"en": "Standard"
+	},
+	"link.ajax" : {
+		"de": "AJAX",
+		"en": "AJAX"
+	},
+	"link.datalog" : {
+		"de": "DataLog",
+		"en": "DataLog"
+	},
+	"link.diagnostic" : {
+		"de": "Diagnose",
+		"en": "Diagnostic"
+	},
+	"link.restart" : {
+		"de": "Neustart",
+		"en": "Restart"
+	},
+	"link.pdf" : {
+		"de": "Web to PDF",
+		"en": "Web to PDF"
+	},
+	"link.language" : {
+		"de": "Sprache",
+		"en": "Language"
+	},
+	"link.intro" : {
+		"de": "Einstiegsseite",
+		"en": "Introduction"
+	},
+#
+# Page content
+#
+	"text.header" : {
+		"de": "Textfeld mit HTML - (text.header in de)",
+		"en": "Textfield with HTML - (text.header in en)"
+		"xx": "xxxxxxxxx with HTML - (text.header in xx)"
+	},
+	"text.content" : {
+		"de": "Einfaches Textfeld, durch HTML strukturiert - (text.content in de)",
+		"en": "Simple text container structured with HTML syntax. - (text.content in de)"
+		"xx": "xxxxxxxxx - (text.content in xx)"
+	},
+#
+# Reading Text by javascript
+#
+	"java.header" : {
+		"de": "Texte im JavaScript - (java.header)",
+		"en": "Texts in JavaScript - (java.header)"
+		"xx": "xxxxxxxxx - (java.header in xx)"
+	},
+	"java.content" : {
+		"de": "Funktionsaufruf in JavaScript für ein (Textflag). <pre>I18n.translate('Textflags')</pre>Der Rückgabewert ist ein String in der gewählten Sprache",
+		"en": "Function call in JavaScript for a Textflag). <pre>I18n.translate('Textflags')</pre>The return value is a string in the choosen language."
+		"xx": "xxxxxxxxx - (java.content in xx)"
+	},
+	"java.button1" : {
+		"de": "Button zur Textausgabe -Text 1 auf Deutsch-",
+		"en": "Button for text output -Text 1 in English-"
+		"xx": "xxxxxxxxx - (java.button1 für xx)"
+	},
+	"java.button2" : {
+		"de": "Button zur Textausgabe -Text 2 auf Deutsch-",
+		"en": "Button for text output -Text 2 in English-"
+		"xx": "xxxxxxxxx - (java.button2 für xx)"
+	},
+	"java.output1" : {
+		"de": "Feldtext 1 auf Deutsch",
+		"en": "Fieldtext 1 in English"
+		"xx": "xxxxxxxxx - (java.output1 für xx)"
+	},
+	"java.output2" : {
+		"de": "Feldtext 2 auf Deutsch",
+		"en": "Fieldtext 2 in English"
+		"xx": "xxxxxxxxx - (java.output2 für xx)"
+	}
+}

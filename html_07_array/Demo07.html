@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>S7-Web2PLC Demo 07: Using AWP_Start_Array</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+
+<body>
+<table class="demohead" > <!-- common head for all demo pages -->
+	<tr class="demorow" >
+		<td class="democoltitle" >This page demonstrates:</td>
+		<td class="democoltext"  >Expanding all elements of an array using AWP_Start_Array.</td>
+	</tr>
+</table>
+<hr>
+<br>
+
+<div>
+With the AWP statement "AWP_Start_Array" the lines until "AWP_End_Array" are automatically repeated for each array element.
+The predefined variables "ArrayIndex" and "value" are replaced by the actual index and the value for each array element :
+</div>
+
+<table>
+<tr>
+<td style="background-color:#80A0FF"></td><td>
+<pre>
+    &lt;!-- AWP_Start_Array Name="&lt;arrayname&gt;" --&gt;
+    &lt;tr&gt;&lt;td&gt;&#x3a;=ArrayIndex:&lt;/td&gt;&lt;td&gt;&#x3a;=value:&lt;/td&gt;&lt;/tr&gt;
+    &lt;!-- AWP_End_Array --&gt;
+</pre>
+</td></tr></table>
+
+<p><strong>Array "test".values :</strong></p>
+
+<!-- 
+The array "values" is a component within the structure DB1,
+the AWP-statement AWP_Start_Struct can be used to define a namespace for the structure and
+to read the structure (and the included array) on the whole.
+-->
+
+<table border="1" width="120px" >
+    <tr><td>Index</td><td>Value</td></tr>
+
+    <!-- AWP_Start_Array Name='"Data".values' -->
+    <tr><td>:=ArrayIndex:</td><td>:=value:</td></tr>
+    <!-- AWP_End_Array -->
+</table>
+
+
+</body>
+</html>

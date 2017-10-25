@@ -1,0 +1,171 @@
+<!-- AWP_In_Variable Name='"VelocityVariables".velocity' -->
+<!-- This AWP-Statement is necessary, if the variable "Velocity" will be written within the HTML page -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<title>S7-Web2PLC Demo11 - Optimized Visualization of a PLC-Variable (Hidden Frame-Version)</title>
+
+<link rel="stylesheet" type="text/css" href="demo.css">
+
+
+
+<script type="text/javascript">
+
+    var g_bPageRequested = false;
+
+    // a timer will be started, after one second the function OnTimer will be called
+    function Start() 
+	{
+        ForceUpdate(:="VelocityVariables".dynValue:);     // immediate initialization of the value visualization
+        setTimeout("OnTimer()",1000);
+    }
+
+	
+	
+	
+	
+	
+	
+    function OnTimer() 
+	{       
+        if (! g_bPageRequested) 
+		{
+            g_bPageRequested = true;
+            // With the following statement reloading of page update11.html into the invisible 
+            // frame "hiddenFrame" will be requested (alternatively without ajax)
+            window.frames["hiddenFrame"].document.location.replace('update11.html');
+        }
+        setTimeout("OnTimer()", 200);  // the function OnTimer is to be called every 200 ms
+    }
+
+    // Within the page update11.html or update11.js the function ForceUpdate is called with the current value.
+    // This value (0..255) controls the width of table "table2" within the table "table1"
+    function ForceUpdate(val) 
+	{
+        var width, barval;
+        var tabelem;
+        
+        tabelem = parent.document.getElementById("bar");
+        width = tabelem.parentNode.clientWidth;
+               
+        barval = ((val*width)/256);                          // convert to percent, Firefox can display % only for integral numbers !
+        if (barval == 0) barval = 1;                         // 0 not allowed for IE    
+        tabelem.style.width = Math.floor(barval)+"px";       // set table width
+
+        var td = parent.document.getElementById("td1");      // display value numerically
+        if (td.textContent) 
+		{                                // textContent is ok for Firefox, not for IE
+           td.textContent = val+"";
+        }
+		else 
+		{
+           td.innerHTML   = val+"";
+        }
+        g_bPageRequested = false; 
+    }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+
+<body onload="Start()">
+
+<table class="demohead">
+	<tr class="demorow">
+		<td class="democoltitle">This page demonstrates:</td>
+		<td class="democoltext" >Hidden iframe to read the data and update the page.
+		</td>
+	</tr>
+</table>
+<hr>
+<!--------------------------------------------------------------------------------------------->
+
+<p>
+dynvalue:<br>
+=> The process value will be changed between 0 and 255 within the PLC.<br>
+=> The value is visualized inside the horizontal bar at the bottom.<br><br>
+velocity:<br>
+=> The fill rate can be adjusted by setting the value inside the box
+</p>
+<!--------------------------------------------------------------------------------------------->
+
+<hr>
+<br><br> <!-- in Ajax, here you will find the comment due to the update11.dat -->
+<hr>
+
+
+<!--------------------------------------------------------------------------------------------->
+
+<p>
+<a href="demo11_ajax.html">Same demo with AJAX</a>
+</p>
+<!--------------------------------------------------------------------------------------------->
+
+<p>The current velocity of change is :="VelocityVariables".velocity:</p>
+<form method="post" action="" enctype="text/plain">
+  <!-- writing of the value "Velocity" requires the AWP_In_Variable - statement at begin of this page -->
+  <input type="text" name='"VelocityVariables".velocity' size="6">
+  <input type="submit" value="set velocity of change" >
+</form>
+<!--------------------------------------------------------------------------------------------->
+
+<p>&nbsp;</p>
+<table border="1" width="100%" id="table1">
+  <tr>
+    <td id="td1" style="width:32px">
+    	0
+    </td>
+    <td>
+        <div style="width:1px; height:16px; border:1px; background-color:#0000FF;" id="bar"></div>
+    </td>
+  </tr>
+</table>
+<p><iframe name="hiddenFrame" height="0" width="0">
+Your browser does not support inlineframes or inlineframes are currently not enabled.
+</iframe></p>
+
+</body>
+</html>

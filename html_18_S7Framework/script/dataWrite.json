@@ -1,0 +1,9 @@
+<!-- AWP_In_Variable Name='"Plc2Web".speed' -->
+<!-- AWP_In_Variable Name='"Plc2Web".name' -->
+<!-- AWP_In_Variable Name='"Plc2Web".age' -->
+{
+"val" :	":=Plc2Web.webserverString:",
+"len" :	"8;1;4",
+"typ" :	"2;0;2",
+"str" : ""
+}

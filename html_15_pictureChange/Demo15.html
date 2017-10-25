@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+	<!-- Discription ----------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.demohead { background-color:#E0E0E0; width:100%}
+		.democoltitle  { width: 189px;font-weight:bold;vertical-align:top;}
+		.democoltext   { }
+		.demorow  { }
+	</style>
+	<table class="demohead" >
+		<tr class="demorow" >
+
+			<td class="democoltitle" >This page demonstrates:</td>
+			<td class="democoltext"  >How to change a picture with javascript.</td>
+		</tr>
+		<tr class="demorow">
+			<td class="democoltitle" >This page is:</td>
+			<td class="democoltext"  >Not implemented in a PLC program.</td>
+		</tr>
+	</table>
+	<br>
+	<!-- END Discription ------------------------------------------------------------------------------------------------------------------------------------->
+		<img id="pic" src="img\red.png">
+		<br>
+		<button onclick="changePic('red')">Red</button>
+		<button onclick="changePic('green')">Green</button>
+		<script>
+			function changePic(color)
+			{
+				if (color == "green")
+				{
+					document.getElementById("pic").src = "img/green.png";
+				}
+				else
+				{
+					document.getElementById("pic").src = "img/red.png";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<link rel="stylesheet" type="text/css" href="CSS/S7_diagnostic.css">
+		<link rel="stylesheet" type="text/css" href="CSS/diag.css">
+		<script type="text/javascript" src="script/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="script/diagnostic_0.0.3.js"></script>
+		<script type="text/javascript" src="script/S7_framework.js"></script>
+		<script type="text/javascript" src="script/Demo14.js"></script>
+		<script type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div id="loading_div">
+			<div class="loading_pic"></div>
+		</div>
+		<!-- Discription ----------------------------------------------------------------------------------------------------------------------------------------->
+		<style>
+			.demohead { background-color:#E0E0E0; width:100%}
+			.democoltitle  { width: 189px;font-weight:bold;vertical-align:top;}
+			.democoltext   { }
+			.demorow  { }
+		</style>
+		<table class="demohead">
+			<tr class="demorow">
+
+				<td class="democoltitle" >This page demonstrates:</td>
+				<td class="democoltext"  >How to implement the diagnostics informations on your own webpage.</td>
+			</tr>
+		</table>
+		<!-- END Discription ------------------------------------------------------------------------------------------------------------------------------------->
+		
+		<div class="container diag">
+			<h1><span>
+				<span>Diagnostics</span>
+				<select name='diagSelector' id='diagSelector'></select>
+			</h1></span>
+			<div id="diagTableDiv" width="1000px" height="250px"></div><br>
+			<div id="diagDetailDiv" width="1000px" height="250px">
+				<span id="diagDetailNo"></span>
+				<span id="diagDetailEventID"></span><br>
+				<span id="diagDetailText">DiagnosticDetail</span>
+			</div>
+		</div>
+	</body>
+</html>
